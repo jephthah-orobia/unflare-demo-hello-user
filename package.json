@@ -1,0 +1,16 @@
+{
+  "name": "unflare-demo-hello-user",
+  "version": "0.0.0",
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20230404.0",
+    "typescript": "^5.0.4",
+    "wrangler": "2.12.1"
+  },
+  "private": true,
+  "scripts": {
+    "start": "wrangler dev"
+  },
+  "dependencies": {
+    "unflare": "^2.0.1"
+  }
+}
