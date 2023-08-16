@@ -1,0 +1,16 @@
+name: Deploy to Cloudflare Workers with Wrangler
+  
+on:
+  push
+  
+jobs:
+  #todo add test
+  deploy-to-workers:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: cloudflare/wrangler-action@v3.0.2
+        with:
+          # Your Cloudflare API Token
+          apiToken: ${{secrets.WORKERS_TOKEN}}
+          # Your Cloudflare Account ID
+          accountId: ${{secrets.WORKERS_ID}}
