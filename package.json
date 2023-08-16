@@ -11,6 +11,6 @@
     "start": "wrangler dev"
   },
   "dependencies": {
-    "unflare": "^2.0.1"
+    "unflare": "^2.0.2"
   }
 }
