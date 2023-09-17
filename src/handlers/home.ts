@@ -3,8 +3,8 @@ import { Route } from 'unflare';
 export const HomeRoute = new Route('/');
 
 HomeRoute.get(() => {
-  const { req, res } = HomeRoute;
-  if (!req.cookies.user) {
+  const { cookies, res } = HomeRoute;
+  if (!cookies.user) {
     return res.html(`
 <!DOCTYPE html>
 <html>
@@ -33,7 +33,7 @@ HomeRoute.get(() => {
 </html>
       `);
   } else {
-    const user = JSON.parse(req.cookies.user);
+    const user = JSON.parse(cookies.user);
     return res.html(`
 <!DOCTYPE html>
 <html>
@@ -59,7 +59,6 @@ HomeRoute.get(() => {
       </form>
     </div>
   </body>
-</html>
-      `);
+</html>`);
   }
 });
